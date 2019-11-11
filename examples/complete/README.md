@@ -6,7 +6,7 @@ This configuration also provisions all the resources needed for the module to fu
 
 ## Task Definition
 
-The Task Definition is declared in [`/task/task-definition.json`](https://github.com/rickybasse/terraform-aws-ecs-fargate-scheduled-task/tree/genesis/examples/complete/task/task-definition.json).
+The Task Definition is declared in [`/task/task-definition.json`](https://github.com/babbel/terraform-aws-ecs-fargate-scheduled-task/tree/master/examples/complete/task/task-definition.json).
 
 In this JSON file the following placeholders need to be replaced based on AWS Account and ECR Repository information:
 * `${image_name}`: The name of the Docker image stored in ECR (including tag)
@@ -33,7 +33,7 @@ For example:
 
 ## Policy
 
-The IAM Policy attached to the IAM Role of the task is declared in [`/task/policy.json`](https://github.com/rickybasse/terraform-aws-ecs-fargate-scheduled-task/tree/genesis/examples/complete/task/policy.json).
+The IAM Policy attached to the IAM Role of the task is declared in [`/task/policy.json`](https://github.com/babbel/terraform-aws-ecs-fargate-scheduled-task/tree/master/examples/complete/task/policy.json).
 
 In this JSON file can be specified any permission the task needs to interact with AWS.
 
