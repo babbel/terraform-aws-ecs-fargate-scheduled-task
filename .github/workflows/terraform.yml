@@ -1,0 +1,30 @@
+name: Terraform
+
+on: [push, pull_request]
+
+jobs:
+  tflint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Lint
+        uses: docker://wata727/tflint
+
+  terraform-checks:
+    name: Validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Init
+        uses: hashicorp/terraform-github-actions/init@v0.4.6
+
+      - name: Format
+        uses: hashicorp/terraform-github-actions/fmt@v0.4.6
+
+      - name: Validate
+        uses: hashicorp/terraform-github-actions/validate@v0.4.6
+        env:
+          AWS_DEFAULT_REGION: eu-west-1
