@@ -16,7 +16,7 @@ A Terraform module to create an ECS Fargate Task Definition which can be schedul
 ## Usage example
 
 A full example leveraging other community modules is contained in the [`/examples/complete`](https://github.com/babbel/terraform-aws-ecs-fargate-scheduled-task/tree/master/examples/complete) directory.
-Here's the gist of using it via the Terraform registry:
+Here's the gist of using it via GitHub source:
 
 ```hcl
 module "fargate_task" {
