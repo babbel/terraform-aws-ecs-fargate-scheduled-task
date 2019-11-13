@@ -1,10 +1,10 @@
-name: Terraform
+name: Lint
 
 on: [push, pull_request]
 
 jobs:
   tflint:
-    name: Lint
+    name: TFLint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -13,7 +13,7 @@ jobs:
         uses: docker://wata727/tflint
 
   terraform-checks:
-    name: Validate
+    name: TFValidate
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
