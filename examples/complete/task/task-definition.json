@@ -1,0 +1,14 @@
+[
+    {
+        "name": "${image_name}",
+        "image": "${account_id}.dkr.ecr.${region}.amazonaws.com/${image_name}",
+        "logConfiguration": {
+            "logDriver": "awslogs",
+            "options": {
+                "awslogs-group": "/ecs/${image_name}-logs",
+                "awslogs-region": "${region}",
+                "awslogs-stream-prefix": "ecs"
+            }
+        }
+    }
+]
