@@ -1,6 +1,6 @@
 # AWS ECS Fargate Scheduled Task Terraform Module
 
-[![Terraform Status](https://github.com/babbel/terraform-aws-ecs-fargate-scheduled-task/workflows/Terraform/badge.svg)](https://github.com/babbel/terraform-aws-ecs-fargate-scheduled-task/actions)
+[![Terraform Status](https://github.com/babbel/terraform-aws-ecs-fargate-scheduled-task/workflows/Lint/badge.svg)](https://github.com/babbel/terraform-aws-ecs-fargate-scheduled-task/actions)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/babbel/terraform-aws-ecs-fargate-scheduled-task/blob/master/LICENCE)
 
 A Terraform module to create an ECS Fargate Task Definition which can be scheduled via CloudWatch Events, with the related CloudWatch Log Group and IAM resources.
