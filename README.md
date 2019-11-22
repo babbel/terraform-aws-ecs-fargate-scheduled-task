@@ -2,8 +2,11 @@
 
 [![Terraform Status](https://github.com/babbel/terraform-aws-ecs-fargate-scheduled-task/workflows/Lint/badge.svg)](https://github.com/babbel/terraform-aws-ecs-fargate-scheduled-task/actions)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/babbel/terraform-aws-ecs-fargate-scheduled-task/blob/master/LICENCE)
+[![GitHub release](https://img.shields.io/github/release/babbel/terraform-aws-ecs-fargate-scheduled-task.svg)](https://github.com/babbel/terraform-aws-ecs-fargate-scheduled-task/releases)
 
 A Terraform module to create an ECS Fargate Task Definition which can be scheduled via CloudWatch Events, with the related CloudWatch Log Group and IAM resources.
+
+Available through the [Terraform registry](https://registry.terraform.io/modules/babbel/ecs-fargate-scheduled-task/aws).
 
 ## Assumptions
 
@@ -20,7 +23,7 @@ Here's the gist of using it via GitHub source:
 
 ```hcl
 module "fargate_task" {
-  source                  = "github.com/babbel/terraform-aws-ecs-fargate-scheduled-task"
+  source                  = "babbel/ecs-fargate-scheduled-task/aws"
   region                  = "eu-west-1"
   task_name               = "fargate-task"
   schedule_expression     = "rate(30 minutes)"
