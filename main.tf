@@ -82,7 +82,7 @@ resource "aws_cloudwatch_event_target" "esc_target" {
     task_count          = 1
     task_definition_arn = aws_ecs_task_definition.fargate_task.arn
     launch_type         = "FARGATE"
-    platform_version    = "LATEST"
+    platform_version    = var.platform_version
 
     network_configuration {
       assign_public_ip = var.assign_public_ip

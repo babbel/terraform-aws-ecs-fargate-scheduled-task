@@ -18,6 +18,12 @@ variable "ecs_cluster_arn" {
   description = "(Required) ARN of the ECS Cluster where to deploy the Fargate task"
 }
 
+variable "platform_version" {
+  type        = string
+  description = "(Optional) Fargate platform version"
+  default     = "LATEST"
+}
+
 variable "task_execution_role_arn" {
   type        = string
   description = "(Required) ARN of the Task Execution Role for the Fargate task"
