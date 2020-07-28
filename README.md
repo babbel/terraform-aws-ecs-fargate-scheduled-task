@@ -65,6 +65,7 @@ MIT Licensed. See [LICENSE](https://github.com/babbel/terraform-aws-ecs-fargate-
 | assign\_public\_ip | (Optional) Assign a public IP to the EC2 instance running the Fargate task | bool | `"false"` | no |
 | ecs\_cluster\_arn | (Required) ARN of the ECS Cluster where to deploy the Fargate task | string | n/a | yes |
 | logs\_retention\_days | (Optional) Retention days for logs of the Fargate task log group | number | `"14"` | no |
+| platform\_version | (Optional) Fargate platform version | string | `"LATEST"` | no |
 | region | (Required) AWS region | string | n/a | yes |
 | schedule\_expression | (Required) CRON schedule expression to trigger the Fargate task | string | n/a | yes |
 | task\_cpu | (Optional) CPU value for the Fargate task | number | `"256"` | no |
