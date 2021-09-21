@@ -50,8 +50,7 @@ Full contributing [guidelines are covered here](https://github.com/babbel/terraf
 
 ## Authors
 
-Created by [Riccardo Bassetto](https://github.com/rickybasse).
-Maintained by [Mehdi Talbi](https://github.com/dimwest), [Dženan Softić](https://github.com/dzeno), [Andrzej Neumann](https://github.com/nandrzej).
+Created by [Data Platfrom at Babbel](https://github.com/babbel-data-platform).
 
 ## License
 
