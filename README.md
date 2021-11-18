@@ -73,6 +73,7 @@ MIT Licensed. See [LICENSE](https://github.com/babbel/terraform-aws-ecs-fargate-
 | task\_memory | (Optional) Memory value for the Fargate task | number | `"512"` | no |
 | task\_name | (Required) Name of the Fargate task | string | n/a | yes |
 | task\_policy | (Required) Path to the Task IAM Policy JSON file | string | n/a | yes |
+| ephemeral\_storage | (Optional) The amount(in GiB) of ephemeral storage to allocate for the task | number | n/a | no |
 | vpc\_security\_groups | (Required) List of security groups for the EC2 instance running the Fargate task | list(string) | n/a | yes |
 | vpc\_subnets | (Required) List of subnets were AWS will spawn an EC2 instance running the Fargate task | list(string) | n/a | yes |
 
