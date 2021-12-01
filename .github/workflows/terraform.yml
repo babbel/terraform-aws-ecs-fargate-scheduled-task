@@ -17,14 +17,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-
-      - name: Init
-        uses: hashicorp/terraform-github-actions/init@v0.4.6
-
-      - name: Format
-        uses: hashicorp/terraform-github-actions/fmt@v0.4.6
-
-      - name: Validate
-        uses: hashicorp/terraform-github-actions/validate@v0.4.6
+      - uses: hashicorp/setup-terraform@v1
+      
+      - name: Terraform fmt
+        id: fmt
+        run: terraform fmt -check
+        continue-on-error: true
+      
+      - name: Terraform Init
+        id: init
+        run: terraform init
+      
+      - name: Terraform Validate
+        id: validate
+        run: terraform validate -no-color
         env:
           AWS_DEFAULT_REGION: eu-west-1

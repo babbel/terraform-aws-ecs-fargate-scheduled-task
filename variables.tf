@@ -51,6 +51,12 @@ variable "task_memory" {
   default     = 512
 }
 
+variable "ephemeral_storage" {
+  type        = number
+  description = "(Optional) The amount(in GiB) of ephemeral storage to allocate for the task"
+  default     = 0
+}
+
 variable "assign_public_ip" {
   type        = bool
   description = "(Optional) Assign a public IP to the EC2 instance running the Fargate task"
@@ -72,3 +78,5 @@ variable "logs_retention_days" {
   description = "(Optional) Retention days for logs of the Fargate task log group "
   default     = 14
 }
+
+

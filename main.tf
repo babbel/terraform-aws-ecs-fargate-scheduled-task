@@ -146,6 +146,13 @@ resource "aws_ecs_task_definition" "fargate_task" {
   cpu                      = var.task_cpu
   memory                   = var.task_memory
 
+  dynamic "ephemeral_storage" {
+    for_each = var.ephemeral_storage > 20 ? [var.ephemeral_storage] : []
+    content {
+      size_in_gib = var.ephemeral_storage
+    }
+  }
+
   execution_role_arn = var.task_execution_role_arn
   task_role_arn      = aws_iam_role.ecs_task_role.arn
 }
